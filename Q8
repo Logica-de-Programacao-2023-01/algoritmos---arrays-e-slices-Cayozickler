@@ -1,0 +1,24 @@
+package main
+
+import "fmt"
+
+func main() {
+	// Criando o slice de strings com tamanho 8
+	slice := []string{"maçã", "banana", "laranja", "uva", "abacaxi", "maçã", "pera", "maçã"}
+
+	// Solicitando ao usuário um valor para remover
+	var valor string
+	fmt.Print("Digite um valor para remover: ")
+	fmt.Scanln(&valor)
+
+	// Removendo todas as ocorrências do valor no slice
+	resultado := make([]string, 0, len(slice))
+	for _, elemento := range slice {
+		if elemento != valor {
+			resultado = append(resultado, elemento)
+		}
+	}
+
+	// Imprimindo o resultado
+	fmt.Println("Resultado:", resultado)
+}
