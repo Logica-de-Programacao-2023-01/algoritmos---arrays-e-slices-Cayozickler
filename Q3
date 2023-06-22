@@ -1,0 +1,17 @@
+package main
+
+import "fmt"
+
+func main() {
+    // Criando o array de floats com 4 elementos
+    array := [4]float64{2.5, 1.5, 3.0, 4.5}
+
+    // Calculando o produto dos valores do array
+    produto := 1.0
+    for _, valor := range array {
+        produto *= valor
+    }
+
+    // Imprimindo o produto dos valores
+    fmt.Println("O produto dos valores no array é:", produto)
+}
