@@ -1,0 +1,15 @@
+package main
+
+import "fmt"
+
+func main() {
+    // Criando o slice de inteiros
+    slice := []int{1, 2, 3, 4, 5}
+
+    // Removendo o terceiro elemento (índice 2)
+    indice := 2
+    slice = append(slice[:indice], slice[indice+1:]...)
+
+    // Imprimindo o slice resultante
+    fmt.Println("Slice resultante:", slice)
+}
