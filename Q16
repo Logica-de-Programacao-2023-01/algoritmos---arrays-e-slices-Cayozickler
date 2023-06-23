@@ -1,0 +1,21 @@
+package main
+
+import "fmt"
+
+func main() {
+	// Criando o array de inteiros com 10 elementos
+	array := [10]int{1, 2, 3, 4, 5, 6, 7, 8, 9, 10}
+
+	// Criando o novo slice para armazenar os elementos pares
+	slice := make([]int, 0)
+
+	// Filtrando os elementos pares e adicionando ao slice
+	for _, valor := range array {
+		if valor%2 == 0 {
+			slice = append(slice, valor)
+		}
+	}
+
+	// Imprimindo o novo slice
+	fmt.Println("Novo Slice:", slice)
+}
